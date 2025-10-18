@@ -1,4 +1,15 @@
-  /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+   :root {
+    --background: #e3e4db;
+    --black: #201010;
+    --dark-blue: #13315c;
+    --light-blue: #348aa7;
+    --red: #7d1128;
+ }
+ 
+ 
+ 
+ 
+ /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
 
   /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
   /*
@@ -14,13 +25,13 @@
     ========================================================================== */
 
   html {
-    color: #222;
+    color: var(--black);
     font-size: 1em;
     line-height: 1.4;
   }
 
   body {
-    background-color: #e3e4db;
+    background-color: var(--background);
   }
 
   /*
@@ -327,7 +338,7 @@
     font-weight: 900;
     font-style: normal;
     font-size: --fs-45pt;
-    color: #13315c;
+    color: var(--dark-blue);
 
   }
 
@@ -336,7 +347,7 @@
     font-style: normal;
 
     font-size: --fs-30pt;
-    color: #348aa7;
+    color: var(--light-blue);
 
   }
 
@@ -345,7 +356,7 @@
     font-style: normal;
 
     font-size: --fs-17pt;
-    color: #201010;
+    color: var(--black);
     
 
   }
@@ -353,7 +364,7 @@
   #author {
     font-style: italic;
     font-weight: 200;
-    color: #7d1128;
+    color: var(--red);
     font-style: italic;
     text-decoration: none;
 
@@ -362,7 +373,7 @@
   #date {
     font-style: italic;
     font-weight: 200;
-    color: #7d1128;
+    color: var(--red);
     font-style: italic;
     text-decoration: none;
 
@@ -373,7 +384,7 @@
     font-style: normal;
 
     font-size: --fs-18pt;
-    color: #201010;
+    color: var(--black);
 
     text-indent: 50px;
   }
@@ -382,7 +393,7 @@
     font-weight: 500;
     font-style: italic;
 
-    color: #7d1128;
+    color: var(--red);
   }
 
   /* menubar 
@@ -392,14 +403,14 @@
 
   /* Add a black background color to the top navigation */
   .topnav {
-    background-color: #201010;
+    background-color: var(--black);
     overflow: hidden;
   }
 
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #e3e4db;
+    color: var(--background);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -409,19 +420,19 @@
 
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #7d1128;
-    color: f2f2f2;
+    background-color: var(--red);
+    color: #f2f2f2;
   }
 
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #e3e4db;
-    color: #201010;
+    background-color: var(--background);
+    color: var(--black);
   }
 
 
   /* scroll menu */
-/* robust horizontal scroller */
+/* horizontal scroller thingy i stole  */
 div.scrollmenu {
   display: flex;
   gap: 1rem;                /* space between items */
@@ -443,7 +454,7 @@ div.scrollmenu > a {
   flex: 0 0 auto;           /* prevent shrinking, keep natural width */
   display: block;           /* allow anchor to wrap block child cleanly */
   text-decoration: none;
-  color: #7d1128;
+  color: var(--red);
 }
 
 /* card inside anchor */
