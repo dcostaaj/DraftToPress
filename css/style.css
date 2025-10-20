@@ -294,6 +294,19 @@
     --fs-48pt: clamp(3.60rem, 1.30vw + 1.80rem, 4.40rem);
   }
 
+  article {
+    margin: 10px; /* mobile */
+
+  }
+
+  @media (min-width: 768px) {
+    article {
+      margin: 0 auto; /* centers */
+      max-width: 700px; /* limits width */
+      padding: 0 2rem; /* optional padding inside */
+    }
+  }
+
   main {
     margin: 10px; /* mobile */
   }
@@ -305,7 +318,6 @@
       padding: 0 2rem; /* optional padding inside */
     }
   }
-
 
   /* my css 
   * idk
@@ -322,7 +334,6 @@
     font-optical-sizing: auto;
     font-variation-settings:
       "wdth" 100;
-    
   }
 
 
@@ -332,9 +343,14 @@
 
 
 
+  div.top {
+    display: flex;
+  }
+  div.title {
+    flex: 33.33%;
+  }
 
-
-  .title {
+  h1.title {
     font-weight: 900;
     font-style: normal;
     font-size: --fs-45pt;
@@ -405,6 +421,8 @@
   .topnav {
     background-color: var(--black);
     overflow: hidden;
+    position: sticky;
+    top: 0;
   }
 
   /* Style the links inside the navigation bar */
@@ -474,11 +492,24 @@ div.scrollmenu > a {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
 }
 
 .scrollmenuitem img:hover {
   width: 110%;
   height: auto;
   display: block;
+}
+
+img.article {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.imgembed {
+ margin: 30px;
+ width: 30%;
+ height: auto;
 }
