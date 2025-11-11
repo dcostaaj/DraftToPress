@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?m=11aa">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -24,18 +25,162 @@
 
 <body>
   <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="articles.html">Articles</a>
-    <a href="about.html">About</a>
+  <div class="nav-left">
+    <a href="index.html" class="logo-link">
+      <img class="logo" src="img/critique corner.png" alt="Critique Corner Logo">
+      <h1>Critique Corner</h1>
+    </a>
   </div>
 
+  <!-- Hamburger toggle button (only shows on mobile) -->
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+
+  <div class="nav-right">
+    <a class="active" href="index.html">
+      <span class="material-symbols-outlined">home</span>
+      <span class="text">Home</span>
+    </a>
+    <a href="articles.html">
+      <span class="material-symbols-outlined">auto_stories</span>
+      <span class="text">Articles</span>
+    </a>
+    <a href="about.html">
+      <span class="material-symbols-outlined">info</span>
+      <span class="text">About</span>
+    </a>
+    <a href="search.html">
+      <span class="material-symbols-outlined">search</span>
+      <span class="text">Search</span>
+    </a>
+  </div>
+</div>
+
+
+
+
   <main>
-    
+    <h1 class="slogan">
+  A home for readers, musos, TV Buffs and writers...
+    </h1>
+    <div class="featured" id="featuredarticle">
+        <div class="featuredarticletext">
+          <h1 class="title" id="featuredarticle">Featured Article Loading...</h1>
+          <p>Article Description lorem ipsum, Dorem Epsum, Filo Pelis. Cary Thomas tenniusstick astereisk.</p>
+        </div>
+        <div class="featuredarticleimage">
+          <img src="img/posterscovers/scenesfromanitalianrestaurant.webp">
+        </div>
+      </div>
+    </div>
+
+    <h1 class="title"> Lorem Ipsum</h1>
+
+    <div class="scrollmenu">
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Thunderbolts*</span>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="scrollmenuitem"><img src="img/posterscovers/scenesfromanitalianrestaurant.webp"
+            alt="scenesfromanitalianrestaurant">
+          <span>Scenes from an Italian Restaurant</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/percyjackson.webp" alt="percyjackson poster">
+          <span>Percy Jackson</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Article 2</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Thunderbolts*</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/percyjackson.webp" alt="percyjackson poster">
+          <span>Percy Jackson</span>
+        </div>
+      </a>
+    </div>
+
+    <h1 class="title"> Dorem Spirum</h1>
+    <div class="scrollmenu">
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Thunderbolts*</span>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="scrollmenuitem"><img src="img/posterscovers/scenesfromanitalianrestaurant.webp"
+            alt="scenesfromanitalianrestaurant">
+          <span>Scenes from an Italian Restaurant</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/percyjackson.webp" alt="percyjackson poster">
+          <span>Percy Jackson</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Article 2</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/thunderbolts.webp" alt="Thunderbolts poster">
+          <span>Thunderbolts*</span>
+        </div>
+      </a>
+      <a href="">
+        <div class="scrollmenuitem"><img src="img/posterscovers/percyjackson.webp" alt="percyjackson poster">
+          <span>Percy Jackson</span>
+        </div>
+      </a>
+    </div>
   </main>
 
 
   <script src="js/app.js"></script>
 
+  <script>
+    async function featuredarticlefunc() {
+      console.log("test1");
+      let featuredarticle = (await sortedArticles())[0];
+      console.log(featuredarticle);
+      let featuredarticletitle = featuredarticle["Article Title"];
+      let featuredarticlelink = featuredarticle["Article Link"];
+      let featuredarticledescription = featuredarticle["Description"];
+      let featuredarticleimage = featuredarticle["Article Image URL"];
+    
+
+      document.getElementById("featuredarticle").innerHTML = `<div class="featuredarticletext">
+          <a href="${featuredarticlelink}"><h1 class="title" id="featuredarticle">${featuredarticletitle}</h1></a>
+          <p>Article Description lorem ipsum, Dorem Epsum, Filo Pelis. Cary Thomas tenniusstick astereisk.</p>
+        </div>
+        <div class="featuredarticleimage">
+          <a href="${featuredarticlelink}"><img src="${featuredarticleimage}"></a>
+        </div>`;
+    }
+
+
+    featuredarticlefunc();
+
+
+  const toggle = document.querySelector('.menu-toggle');
+  const navRight = document.querySelector('.nav-right');
+
+  toggle.addEventListener('click', () => {
+    navRight.classList.toggle('show');
+  });
+  </script>
 </body>
 
 </html>

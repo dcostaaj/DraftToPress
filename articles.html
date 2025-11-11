@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -24,10 +25,37 @@
 
 <body>
   <div class="topnav">
-    <a href="index.html">Home</a>
-    <a class="active" href="articles.html">Articles</a>
-    <a href="about.html">About</a>
+  <div class="nav-left">
+    <a href="index.html" class="logo-link">
+      <img class="logo" src="img/critique corner.png" alt="Critique Corner Logo">
+      <h1>Critique Corner</h1>
+    </a>
   </div>
+
+  <!-- Hamburger toggle button (only shows on mobile) -->
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+
+  <div class="nav-right">
+    <a  href="index.html">
+      <span class="material-symbols-outlined">home</span>
+      <span class="text">Home</span>
+    </a>
+    <a class="active" href="articles.html">
+      <span class="material-symbols-outlined">auto_stories</span>
+      <span class="text">Articles</span>
+    </a>
+    <a href="about.html">
+      <span class="material-symbols-outlined">info</span>
+      <span class="text">About</span>
+    </a>
+    <a href="search.html">
+      <span class="material-symbols-outlined">search</span>
+      <span class="text">Search</span>
+    </a>
+  </div>
+</div>
 
   <main>
     <h1 class="title"> Lorem Ipsum</h1>
