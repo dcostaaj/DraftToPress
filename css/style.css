@@ -313,6 +313,23 @@
      }
    }
 
+   div.text {
+     margin: 10px;
+     /* mobile */
+
+   }
+
+   @media (min-width: 768px) {
+     div.text {
+       margin: 0 auto;
+       /* centers */
+       max-width: 700px;
+       /* limits width */
+       padding: 0 2rem;
+       /* optional padding inside */
+     }
+   }
+
    main {
      margin: 10px;
      /* mobile */
