@@ -440,7 +440,7 @@
      font-weight: 400;
      font-style: normal;
 
-     font-size: var(--fs-20pt);
+     font-size: var(--fs-18pt);
      color: var(--black);
 
      text-indent: 0px;
@@ -815,6 +815,7 @@
    .slogan {
      font-style: italic;
      font-family: Alice, Serif;
+     font-size: var(--fs-44pt);
    }
 
    .column {
