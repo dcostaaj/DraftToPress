@@ -5,18 +5,33 @@ async function loadCSV() {
     const csvText = await response.text();
 
     const rows = csvText.trim().split("\n");
-    const headers = rows.shift().split(",");
+    const headers = rows.shift().split(",").map(h => h.trim());
 
-    const articles = rows.map(row => {
+    console.log("CSV Headers:", headers);
+
+    const parsed = [];
+
+    rows.forEach((row, rowIndex) => {
         const values = row.split(",");
+
+        if (values.length !== headers.length) {
+            console.warn(
+                `⚠️ CSV row ${rowIndex + 2} has ${values.length} columns but expected ${headers.length}:`,
+                row
+            );
+        }
+
         const entry = {};
         headers.forEach((header, i) => {
-            entry[header.trim()] = values[i].trim();
+            entry[header] = (values[i] ?? "").trim();
         });
-        return entry;
+
+        parsed.push(entry);
     });
-    return articles;
+
+    return parsed;
 }
+
 
 async function sortedArticles() {
     const articles = await loadCSV();

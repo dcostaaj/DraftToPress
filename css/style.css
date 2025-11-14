@@ -738,8 +738,8 @@
    }
 
    .imgembed {
-     width: 400px;
-     height: auto;
+    height: 400px;
+     width: auto;
    }
 
    .sidebar {
