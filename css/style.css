@@ -440,7 +440,7 @@
      font-weight: 400;
      font-style: normal;
 
-     font-size: --fs-18pt;
+     font-size: var(--fs-20pt);
      color: var(--black);
 
      text-indent: 0px;
@@ -738,8 +738,7 @@
    }
 
    .imgembed {
-     margin: 30px;
-     width: 30%;
+     width: 400px;
      height: auto;
    }
 
